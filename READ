@@ -1,0 +1,42 @@
+# WSQ10.cpp
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+float prom(float x){
+
+    return (x/10);
+}
+
+int main(){
+
+    int suma=0;
+    float dif, desvar=0;
+    float numeros[10];
+
+
+    for (int i=0; i<10; i++){
+
+    cout << "Introduce un numero" << endl;
+    cin >> numeros[i];
+
+    suma = suma + numeros[i];
+    }
+
+    for (int j=0; j<10; j++){
+
+        dif = (numeros[j])-prom(suma);
+        desvar = desvar + (pow(dif,2));
+    }
+
+
+    desvar = despow (desvar/10,(0.5));
+
+    cout << "El valor obtenido de la suma de los valores es:  " <<suma << endl;
+    cout << "El promedio de los valores ingresados es igual a: " << prom(suma) << endl;
+    cout << "La desviación estándar de los numeros es " << desvar << endl;
+
+
+    return 0;
+}
